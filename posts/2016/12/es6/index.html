@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+    <script src="../../../../js/jquery-1.9.1.js"></script>
+    <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../../css/nest.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../../../image/bg.jpg'); background-position: center; background-size: cover;">
+
+    <!-- Static navbar -->
+    <div class="container">
+        <div class="header-nav">
+            <div class="header-logo">
+            </div>
+            <div class="nav pull-right">
+                <a href="https://zhoushu8.github.io/">Home</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Static navbar -->
+
+    <!-- Header -->
+    <div class="container header-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="header-content">
+                    <h1 class="header-title">ES6</h1>
+                    <p class="header-date">2016-12-26</p>
+                    <div class="header-underline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Header -->
+
+</div>
+<!-- /Header -->
+
+
+<!-- Content -->
+<div class="container content">
+    <h2>1. 方法设默认参数</h2>
+    <div class="highlight">
+        <pre><span></span>var link = function(height = 50, 
+    color = 'red', 
+    url = 'http://azat.co') {
+}</pre></div>
+    <h2>2. 多行字符串用反引号(在英文输入法下按tab上面一个键)，换行就不用拼接了</h2>
+    <div class="highlight">
+        <pre><span></span>var fourAgreements = `You have the right to be you.
+You can only be you when you do your best.`;</pre></div>
+    <h2>3. 模板对象，这样变量就不用拼接了</h2>
+    <div class="highlight">
+        <pre><span></span>var id = '4',
+var url = `http://localhost:3000/api/messages/${id}`;</pre></div>
+    <h2>4. let和const</h2>
+    <div class="highlight">
+        <pre><span></span>let是一种新的变量申明方式，它允许你把变量作用域控制在块级里面。用大括号定义代码块
+const 常量
+var amount = 1;
+{
+    let amount = 1000;
+}
+console.log(amount); // 1</pre></div>
+    <h2>5. 字符串的方法</h2>
+    <div class="highlight">
+        <pre><span></span>includes()：返回布尔值，表示是否找到了参数字符串。
+startsWith()：返回布尔值，表示参数字符串是否在源字符串的头部。
+endsWith()：返回布尔值，表示参数字符串是否在源字符串的尾部。
+repeat方法返回一个新字符串，表示将原字符串重复n次。'x'.repeat(3) // "xxx"
+padStart用于头部补全，padEnd用于尾部补全。如果某个字符串不够指定长度，会在头部或尾部	补全。
+'x'.padStart(4, 'ab') // 'abax'
+'x'.padEnd(4, 'ab') // 'xaba'
+如果省略第二个参数，则会	用空格补全长度。</pre></div>
+    <h2>5. ...</h2>
+    <div class="highlight">
+        <pre><span></span>取最大元素Math.max(...[14, 3, 77])   等同于  Math.max(14, 3, 77);
+通过push函数，将一个数组添加到另一个数组的尾部
+var arr1 = [0, 1, 2];
+var arr2 = [3, 4, 5];
+arr1.push(...arr2);</pre></div>
+    <h2>6. 遍历</h2>
+    <p>for...in循环主要是为遍历对象而设计的，不适用于遍历数组</p>
+    <div class="highlight">
+        <pre><span></span>for (var key in arrData) { 
+     if (typeof arrData[key] === 'string') { 
+         arrData[key] = ''; 
+      } else if (typeof arrData[key] === 'object') { 
+         arrData[key] = []; 
+      } 
+}</pre></div>
+    <p>for...of遍历数组</p>
+    <div class="highlight">
+        <pre><span></span>for (let item of list) { 
+     amout = amout + (item.amount === '' ? 0 : parseFloat(item.amount)); 
+}</pre></div>
+</div>
+<!-- /Content -->
+
+<!-- Footer -->
+
+<!-- /Footer -->
+</body>
+</html>

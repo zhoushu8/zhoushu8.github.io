@@ -99,6 +99,31 @@ arr1.push(...arr2);</pre></div>
         <pre><span></span>for (let item of list) { 
      amout = amout + (item.amount === '' ? 0 : parseFloat(item.amount)); 
 }</pre></div>
+    <h2>7. 方法重载</h2>
+    <p>Arguments对象实现方法重载(for里面加单引号是为了显示问题)</p>
+    <div class="highlight">
+        <pre><span></span>function test(){
+    var sum = 0;
+    for(var i=0;i<'arguments.length';i++){
+        sum += arguments[i];
+    }
+    console.log(sum);
+}
+test();          //0
+test(11,12);     //23
+test(11,12,13);  //36</pre></div>
+    <p>ES6实现方法重载</p>
+    <div class="highlight">
+        <pre><span></span>function test(...nums){
+    var sum = 0;
+    for(var i=0;i<'nums.length';i++){
+        sum += nums[i];
+    }
+    console.log(sum);
+}
+test();          //0
+test(11,12);     //23
+test(11,12,13);  //36</pre></div>
 </div>
 <!-- /Content -->
 
